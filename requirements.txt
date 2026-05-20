@@ -1,0 +1,49 @@
+# Major-index technical + quantum workflow
+# Shared stack aligned to the versions already used successfully in this workspace,
+# while preserving the library choices from `index_project/requirements.txt`
+# and `quantum_project/requirements.txt`.
+
+# Core numerics / data handling
+numpy==2.2.5
+pandas==2.2.3
+scipy==1.15.2
+scikit-learn==1.7.2
+joblib==1.5.2
+
+# Market data / IO
+yfinance==0.2.66
+openpyxl>=3.1
+
+# Classical ML / econometrics
+xgboost==3.2.0
+statsmodels==0.14.4
+arch
+
+# Deep learning
+torch==2.8.0
+
+# Quantum stack
+qiskit==2.3.1
+qiskit-aer
+qiskit-machine-learning
+qiskit-ibm-runtime
+mthree
+
+# Visualization / presentation
+matplotlib==3.10.1
+seaborn==0.13.2
+Pillow==11.2.1
+python-pptx==1.0.2
+
+# Notebook tooling
+ipython==8.37.0
+jupyter==1.1.1
+jupyterlab==4.4.1
+notebook==7.4.1
+ipykernel==6.29.5
+jupyter-client==8.6.3
+jupyter-core==5.8.1
+nbformat==5.10.4
+nbclient==0.10.2
+nbconvert==7.16.6
+tqdm==4.67.1
