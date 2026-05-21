@@ -1,6 +1,6 @@
 # Major Index Forecasting With Classical, Deep, and Quantum Models
 
-This repository studies one-step-ahead daily return forecasting for major US equity indices using econometric baselines, classical machine learning, deep learning, and quantum-enhanced variants.
+This repository studies one-step-ahead index-level forecasting for major US equity indices using econometric baselines, classical machine learning, deep learning, and quantum-enhanced variants.
 
 ## Research Scope
 - Indices: `^IXIC`, `^GSPC`, `^DJI`, `^RUA`
@@ -8,13 +8,13 @@ This repository studies one-step-ahead daily return forecasting for major US equ
 - Sample: `2022-01-01` to `2026-03-31`
 - Hyperparameter tuning period: calendar year `2022`
 - Evaluation period: `2023-01-01` to `2026-03-31`
-- Forecast target: one-step-ahead daily return
+- Forecast target: one-step-ahead index level
 - Sliding-window settings: `10` and `20`
 
 ## Feature Set
-- Inputs are fixed to 9 direct features:
-  `close`, `rsi14`, `macd_hist`, `bb_z20`, `roc10`, `vol20`, `sma10_gap`, `atr14_pct`, `williams_r14`
-- The quantum workflow uses these 9 inputs directly with no PCA, implying 9 qubits at the feature-encoding stage.
+- Inputs are fixed to 8 technical indicators only:
+  `rsi14`, `macd_hist`, `bb_z20`, `roc10`, `vol20`, `sma10_gap`, `atr14_pct`, `williams_r14`
+- The quantum workflow uses these 8 inputs directly with no PCA, implying 8 qubits at the feature-encoding stage.
 
 ## Notebook Map
 - [00_major_index_data_collection_and_eda.ipynb](/Users/jimyhc/Desktop/research/quantum_index/root/notebooks/00_major_index_data_collection_and_eda.ipynb)
@@ -22,13 +22,13 @@ This repository studies one-step-ahead daily return forecasting for major US equ
 - [01_major_index_sliding_window_pipeline.ipynb](/Users/jimyhc/Desktop/research/quantum_index/root/notebooks/01_major_index_sliding_window_pipeline.ipynb)
   Builds the shared rolling-window bundle used by all downstream experiments.
 - [02_major_index_econometric_benchmarks.ipynb](/Users/jimyhc/Desktop/research/quantum_index/root/notebooks/02_major_index_econometric_benchmarks.ipynb)
-  Runs linear, ARMA, ARIMA, ARCH-family, and GARCH-family benchmarks with a single chronological fit.
+  Runs linear, ARMA, ARIMA, ARCH-family, and GARCH-family benchmarks using a fit-on-2022, one-step walk-forward baseline in index-level space.
 - [03_major_index_classical_ml_rolling.ipynb](/Users/jimyhc/Desktop/research/quantum_index/root/notebooks/03_major_index_classical_ml_rolling.ipynb)
-  Runs rolling-window tuning and evaluation for `SVR`, `RandomForest`, `GradientBoosting`, and `XGBoost`.
+  Runs rolling-window tuning and evaluation for `SVR`, `RandomForest`, `GradientBoosting`, and `XGBoost`, with results reported directly in index-level space.
 - [04_major_index_deep_learning_rolling.ipynb](/Users/jimyhc/Desktop/research/quantum_index/root/notebooks/04_major_index_deep_learning_rolling.ipynb)
-  Runs rolling-window tuning and evaluation for `MLP`, `RNN`, `LSTM`, and `GRU`.
+  Runs rolling-window tuning and evaluation for `MLP`, `RNN`, `LSTM`, and `GRU`, with results reported directly in index-level space.
 - [05_major_index_quantum_rolling.ipynb](/Users/jimyhc/Desktop/research/quantum_index/root/notebooks/05_major_index_quantum_rolling.ipynb)
-  Runs the quantum pipeline after the classical deep-learning setup, including `ideal`, `aer_noisy`, `mthree_readout`, and `zne` modes when available.
+  Runs the quantum pipeline after the classical deep-learning setup, including `ideal`, `aer_noisy`, `mthree_readout`, and `zne` modes when available, with results reported directly in index-level space.
 
 ## Recommended Execution Order
 1. `notebooks/00_major_index_data_collection_and_eda.ipynb`
@@ -41,6 +41,7 @@ This repository studies one-step-ahead daily return forecasting for major US equ
 ## Outputs
 - Each notebook writes to its own folder under `outputs/`.
 - Tables, prediction logs, summary metrics, and figures are written incrementally during execution.
+- Prediction exports retain the full logged path by default, with direct index-level predictions plus daily signed and absolute percent-error traces for each saved run.
 - Rolling notebooks write per-window results immediately so interrupted runs retain completed work.
 
 ## Resume Behavior
