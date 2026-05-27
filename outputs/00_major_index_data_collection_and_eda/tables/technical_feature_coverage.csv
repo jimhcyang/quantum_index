@@ -1,0 +1,5 @@
+index_key,rows,rsi14_non_null,macd_hist_non_null,bb_z20_non_null,roc10_non_null,vol20_non_null,sma10_gap_non_null,atr14_pct_non_null,williams_r14_non_null
+DOWJONES,1064,1062,1064,1045,1054,1044,1055,1051,1051
+NASDAQ,1064,1063,1064,1045,1054,1044,1055,1051,1051
+RUSSELL3000,1064,1063,1064,1045,1054,1044,1055,1051,1051
+SP500,1064,1063,1064,1045,1054,1044,1055,1051,1051

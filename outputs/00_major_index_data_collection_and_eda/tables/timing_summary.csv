@@ -1,0 +1,9 @@
+step,elapsed_seconds
+download_raw_data,1.1106383753940463
+visual_daily_return_distribution,0.285803958773613
+visual_normalized_close_levels,0.24700737511739135
+visual_rolling_volatility,0.23126074997708201
+visual_return_correlation_heatmap,0.12287237495183945
+technical_indicator_panel,0.01868208311498165
+descriptive_statistics,0.004898249637335539
+data_quality_and_split_preview,0.003603209275752306

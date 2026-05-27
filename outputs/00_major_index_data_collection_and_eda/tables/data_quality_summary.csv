@@ -1,0 +1,5 @@
+index_key,index_label,rows,first_date,last_date,duplicate_dates,missing_open,missing_high,missing_low,missing_close,missing_adj_close,missing_volume
+DOWJONES,Dow Jones Industrial Average,1064,2022-01-03,2026-03-31,0,0,0,0,0,0,0
+NASDAQ,Nasdaq Composite,1064,2022-01-03,2026-03-31,0,0,0,0,0,0,0
+RUSSELL3000,Russell 3000,1064,2022-01-03,2026-03-31,0,0,0,0,0,0,0
+SP500,S&P 500,1064,2022-01-03,2026-03-31,0,0,0,0,0,0,0

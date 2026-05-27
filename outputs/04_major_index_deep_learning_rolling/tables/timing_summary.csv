@@ -1,0 +1,5 @@
+step,elapsed_seconds
+tuning_ml_runs,48.18759220799984
+evaluation_deep_runs,36.62057183300021
+score_and_export_summaries,12.026923041999908
+select_best_deep_configs,6.977383166999061

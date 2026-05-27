@@ -1,0 +1,9 @@
+feature_name,type,description
+rsi14,technical_indicator,14-day relative strength index.
+macd_hist,technical_indicator,MACD histogram from 12/26 EMA with 9-day signal.
+bb_z20,technical_indicator,20-day Bollinger standardized deviation from rolling mean.
+roc10,technical_indicator,10-day rate of change.
+vol20,technical_indicator,20-day rolling realized volatility of daily returns.
+sma10_gap,technical_indicator,Percent gap between the close and its 10-day simple moving average.
+atr14_pct,technical_indicator,14-day average true range scaled by the close level.
+williams_r14,technical_indicator,"14-day Williams %R oscillator derived from high, low, and close."

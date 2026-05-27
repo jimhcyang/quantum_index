@@ -1,0 +1,2 @@
+requested_start_date,requested_end_date,actual_first_trading_date,actual_last_trading_date,hp_tuning_start_date,hp_tuning_end_date,evaluation_start_date,tuning_last_trading_date,evaluation_first_trading_date,tuning_rows,evaluation_rows
+2022-01-01,2026-03-31,2022-01-03,2026-03-31,2022-01-01,2022-12-31,2023-01-01,2022-12-30,2023-01-03,251,813
