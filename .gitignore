@@ -14,3 +14,5 @@ __pycache__/
 
 # Generated project artifacts
 outputs/**/all_rolling_logs.csv
+outputs/**/all_full_run_logs.csv
+outputs/**/all_sensitivity_logs.csv
